@@ -1,0 +1,36 @@
+name: loyalty_referral_codes
+display_name: Loyalty Referral Codes
+alias: loyalty_referral_code
+fields:
+  - name: loyalty_referral_code_id
+    display_name: Loyalty Referral Code ID
+    type: string
+    description: The unique referral code assigned to a customer.
+  - name: referral_url
+    display_name: Referral URL
+    type: string
+    description: The unique referral code URL.
+  - name: total_shares
+    display_name: Total Shares
+    type: number
+    description: The number of times that this referral code has been shared.
+  - name: total_clicks
+    display_name: Total Clicks
+    type: number
+    description: The total number of clicks of the shared referral code URL.
+  - name: order_conversions_count
+    display_name: Order Conversions Count
+    type: number
+    description: The number of orders that have resulted from this referral code.
+  - name: order_conversions_amount
+    display_name: Order Conversions Amount
+    type: number
+    description: The dollar amount of the number of orders that have resulted from this referral code.
+  - name: expiration_ts
+    display_name: Expiration Date & Time
+    type: ts
+    description: The date & time that the referral code expires, if it does.
+  - name: is_expired
+    display_name: Is Expired
+    type: boolean
+    description: Determines whether or not the referral code is expired.

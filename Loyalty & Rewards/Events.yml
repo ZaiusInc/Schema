@@ -1,0 +1,49 @@
+name: events
+fields:
+  - name: previous_loyalty_tier_id
+    display_name: Previous Loyalty Tier ID
+    type: string
+    description: The ID of the tier that the customer was previously associated with.
+  - name: current_loyalty_tier_id
+    display_name: Current Loyalty Tier ID
+    type: string
+    description: current_loyalty_tier_id
+  - name: previous_loyalty_points_balance
+    display_name: Previous Loyalty Points Balance
+    type: number
+    description: The loyalty points balance of the customer before this event.
+  - name: current_loyalty_points_balance
+    display_name: Current Loyalty Points Balance
+    type: number
+    description: The loyalty points balance of the customer after this event.
+  - name: loyalty_change_in_points
+    display_name: Loyalty Change In Points
+    type: number
+    description: The total change in loyalty points due to this event.
+  - name: loyalty_referral_code_id
+    display_name: Loyalty Referral Code ID
+    type: string
+    description: The unique referral code that this event applies to.
+  - name: loyalty_referred_customer_email
+    display_name: Loyalty Referred Customer Email
+    type: string
+    deescription: The email of the customer that was referred.
+relations:
+  - name: loyalty_referral_code
+    display_name: Loyalty Referral Code
+    child_object: loyalty_referral_codes
+    join_fields:
+      parent: loyalty_referral_code_id
+      child: loyalty_referral_code_id
+  - name: previous_loyalty_tier
+    display_name: Previous Loyalty Tier
+    child_object: loyalty_tiers
+    join_fields:
+      parent: previous_loyalty_tier_id
+      child: loyalty_tier_id
+  - name: current_loyalty_tier
+    display_name: Current Loyalty Tier
+    child_object: loyalty_tiers
+    join_fields:
+      parent: current_loyalty_tier_id
+      child: loyalty_tier_id

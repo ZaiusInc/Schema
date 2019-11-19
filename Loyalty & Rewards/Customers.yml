@@ -1,0 +1,39 @@
+name: customers
+fields:
+  - name: loyalty_points_balance
+    type: number
+    display_name: Loyalty Points Balance
+    description: The number of loyalty points that the customer currently has.
+  - name: loyalty_referral_code_id
+    type: string
+    display_name: Loyalty Referral Code ID
+    description: The unique Referral Code ID assigned to the customer.
+  - name: loyalty_tier_id
+    type: string
+    display_name: Loyalty Tier ID
+    description: The ID of the Loyalty Tier that the customer is associated with.
+  - name: loyalty_profile_created_at
+    type: ts
+    display_name: Loyalty Profile Created At
+    description: The date & time that the customer record was created in the connected loyalty app.
+  - name: loyalty_profile_updated_at
+    type: ts
+    display_name: Loyalty Profile Updated At
+    description: The date & time that the customer record was last updated in the connected loyalty app.
+  - name: loyalty_is_enrolled_member
+    type: boolean
+    display_name: Loyalty Is Enrolled Member
+    description: If true, the customer is currently enrolled in your loyalty program.
+relations:
+  - name: loyalty_referral_code
+    display_name: Loyalty Referral Code
+    child_object: loyalty_referral_codes
+    join_fields:
+      - parent: loyalty_referral_code_id
+        child: loyalty_referral_code_id
+  - name: loyalty_tier
+    display_name: Loyalty Tier
+    child_object: loyalty_tiers
+    join_fields:
+      - parent: loyalty_tier_id
+        child: loyalty_tier_id

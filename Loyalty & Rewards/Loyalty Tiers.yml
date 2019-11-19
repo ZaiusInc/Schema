@@ -1,0 +1,32 @@
+name: loyalty_tiers
+display_name: Loyalty Tiers
+alias: loyalty_tier
+fields:
+  - name: loyalty_tier_id
+    display_name: Loyalty Tier ID
+    type: string
+    description:  The unique identifier for a Loyalty Tier.
+  - name: name
+    display_name: Name
+    type: string
+    description: The name of the Loyalty Tier.
+  - name: description
+    display_name: Description
+    type: string
+    description: A description of this Loyalty Tier.
+  - name: rank
+    display_name: Rank
+    type: number
+    description: The numeric rank of this Loyalty Tier relative to other Loyalty Tiers.
+  - name: required_dollar_spend
+    display_name: Required Dollar Spend
+    type: number
+    description: The amount of dollars required to be spent by a customer to reach this Loyalty Tier.
+  - name: required_points
+    display_name: Required Points
+    type: number
+    description: The number of points required to reach this Loyalty Tier.
+  - name: required_purchases
+    display_name: Required Purchases
+    type: number
+    description: The number of purchases required to reach this Loyalty Tier.
