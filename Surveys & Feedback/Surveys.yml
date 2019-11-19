@@ -1,0 +1,29 @@
+name: surveys
+display_name: Surveys
+alias: survey
+fields:
+  - name: survey_id
+    type: string
+    display_name: Survey ID
+    description: The unique identifier of the customer survey.
+    primary: true
+  - name: title
+    type: string
+    display_name: Title
+    description: The title of the customer survey.
+  - name: language
+    type: string
+    display_name: Language
+    description: The language of the survey in ISO-639-1 format (e.g. en-us)
+  - name: url
+    type: string
+    display_name: URL
+    description: The full URL that the survey is / was accessible at.
+  - name: created_at
+    type: ts
+    display_name: Created at
+    description: The date & time that the survey was created.
+  - name: updated_at
+    type: ts
+    display_name: Updated at
+    description: The date & time that the survey was last updated.

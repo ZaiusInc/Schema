@@ -1,0 +1,33 @@
+name: events
+fields:
+  - name: survey_id
+    type: string
+    display_name: Survey ID
+    description: The unique identifier of the customer survey.
+  - name: survey_question_id
+    type: string
+    display_name: Survey Question ID
+    description: The unique identifier of a question within a customer survey.
+  - name: survey_question_response_id
+    type: string
+    display_name: Survey Question Response ID
+    description: The unique identifier of the customer's response to a survey question.
+relations:
+  - name: survey
+    display_name: Survey
+    child_object: surveys
+    join_fields:
+      - parent: survey_id
+        child: survey_id
+  - name: survey_question
+    display_name: Survey Question
+    child_object: survey_questions
+    join_fields:
+      - parent: survey_question_id
+        child: survey_question_id
+  - name: survey_question_response
+    display_name: Survey Question Response
+    child_object: survey_question_responses
+    join_fields:
+      - parent: survey_question_response_id
+        child: survey_question_response_id

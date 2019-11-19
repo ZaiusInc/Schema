@@ -1,0 +1,34 @@
+name: survey_questions
+display_name: Survey Questions
+alias: survey_question
+fields:
+  - name: survey_question_id
+    type: string
+    display_name: Survey Question ID
+    description: The unique identifier of a question within a customer survey.
+    primary: true
+  - name: text
+    type: string
+    display_name: Question Text
+    description: The survey's question text.
+  - name: survey_id
+    type: string
+    display_name: Survey ID
+    description: The unique identifier of the customer survey this question belongs to.
+  - name: type
+    type: string
+    display_name: Question Type
+    description: The type of question.
+    valid_values:
+      - single_choice
+      - scale
+      - open_ended
+      - demographic
+      - datetime
+      - multiple_choice
+      - presentation
+      - file_upload
+  - name: required
+    type: boolean
+    display_name: Is Required Question?
+    description: Indicates wheter or not the question must be answered by the customer.

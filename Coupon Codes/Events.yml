@@ -1,9 +1,6 @@
 name: events
 fields:
-  - name: coupon_code
-    type: string
-    display_name: Coupon Code
-    description: The coupon code given or redeemed in this event.
+  - name: coupon_code # Definition within the "Base Schema" module
 relations:
   - name: coupon
     display_name: Coupon

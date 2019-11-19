@@ -1,0 +1,33 @@
+name: events
+fields:
+  - name: product_review_id
+    type: string
+    display_name: Product Review ID
+    description: The ID of the review relevant to this event (for product reviews)
+  - name: product_question_id
+    type: string
+    display_name: Product Question ID
+    description: The ID of the question relevant to this event (for product Q&As)
+  - name: product_answer_id
+    type: string
+    display_name: Product Answer ID
+    description: The ID of the answer relevant to this event (for product Q&As)
+relations:
+  - name: product_review
+    display_name: Product Review
+    child_object: product_reviews
+    join_fields:
+      - parent: product_review_id
+        child: review_id
+  - name: product_question
+    display_name: Product Question
+    child_object: product_questions
+    join_fields:
+      - parent: product_question_id
+        child: question_id
+  - name: product_answer
+    display_name: Product Answer
+    child_object: product_answers
+    join_fields:
+      - parent: product_answer_id
+        child: answer_id

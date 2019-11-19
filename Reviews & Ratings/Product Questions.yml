@@ -1,0 +1,32 @@
+name: product_questions
+display_name: Product Questions
+alias: product_question
+fields:
+  - name: question_id
+    type: string
+    display_name: Question ID
+    description: The unique ID for this question
+    primary: true
+  - name: product_id
+    type: string
+    display_name: Product ID
+    description: The ID of the queried product
+  - name: content
+    type: string
+    display_name: Content
+    description: The overall question content
+  - name: visible
+    type: boolean
+    display_name: Visible?
+    description: Whether this question can be seen on the site
+  - name: created_at
+    type: timestamp
+    display_name: Creation Date
+    description: The date and time when this question was submitted
+relations:
+  - name: product
+    display_name: Product
+    child_object: products
+    join_fields:
+      - parent: product_id
+        child: product_id

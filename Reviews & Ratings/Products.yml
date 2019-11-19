@@ -1,0 +1,21 @@
+name: products
+fields:
+  - name: average_score
+    type: number
+    display_name: Average Review Score
+    description: Average score of all reviews for the product
+  - name: total_reviews
+    type: number
+    display_name: Total Review Count
+    description: Total count of reviews left for the product
+  - name: top_review_id
+    type: string
+    display_name: Top Review ID
+    description: Unique ID of the top review identified for this product
+relations:
+  - name: top_review
+    display_name: Top Review
+    child_object: product_reviews
+    join_fields:
+      - parent: top_review_id
+        child: review_id

@@ -1,0 +1,58 @@
+name: product_answers
+display_name: Product Answers
+alias: product_answer
+fields:
+  - name: answer_id
+    type: string
+    display_name: Answer ID 
+    description: The unique ID for this answer
+    primary: true
+  - name: product_id
+    type: string
+    display_name: Product ID
+    description: The ID of the product this answer relates to
+  - name: question_id
+    type: string
+    display_name: Question ID 
+    description: The ID of the question this answer relates to
+  - name: from_store_owner
+    type: boolean
+    display_name: From Store Owner?
+    description: Whether this answer was provided by the actual store owner
+  - name: verified
+    type: boolean
+    display_name: Verified?
+    description: Whether this answer was left by a verified buyer
+  - name: content
+    type: string
+    display_name: Content
+    description: The overall answer content
+  - name: visible
+    type: boolean
+    display_name: Visible?
+    description: Whether this answer can be seen on the site
+  - name: created_at
+    type: timestamp
+    display_name: Creation Date
+    description: The date and time when this answer was submitted  
+  - name: positive_reaction_count
+    type: number
+    display_name: Positive Reaction Count
+    description: The number of users who rated this answer positively
+  - name: negative_reaction_count
+    type: number
+    display_name: Negative Reaction Count
+    description: The number of users who rated this answer negatively
+relations:
+  - name: product
+    display_name: Product
+    child_object: products
+    join_fields:
+      - parent: product_id
+        child: product_id
+  - name: product_question
+    display_name: Product Question
+    child_object: product_questions
+    join_fields:
+      - parent: question_id
+        child: question_id

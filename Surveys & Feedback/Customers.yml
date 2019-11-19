@@ -1,0 +1,14 @@
+name: customers
+fields:
+  - name: nps_score
+    type: number
+    display_name: NPS Score
+    description: The most recent NPS score provided by the customer.
+  - name: nps_group
+    type: text
+    display_name: NPS Group
+    description: The NPS group (Promoter, Passive, Detractor) that the customer belongs to.
+    valid_values:
+      - promoter
+      - passive
+      - detractor

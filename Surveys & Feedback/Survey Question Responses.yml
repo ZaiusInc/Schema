@@ -1,0 +1,33 @@
+name: survey_question_responses
+display_name: Survey Question Responses
+alias: survey_question_response
+fields:
+  - name: survey_question_response_id
+    type: string
+    display_name: Survey Question Response ID
+    description: The unique identifier of the customer's response to a survey question.
+    primary: true
+  - name: survey_question_id
+    type: string
+    display_name: Survey Question ID
+    description: The unique identifier of the question within a customer survey that this response belongs to.
+  - name: response_as_text
+    type: string
+    display_name: Response (Text)
+    description: The question response as text. Will be empty if the response is not text! (Refer to other Question Response fields)
+  - name: response_as_number
+    type: number
+    display_name: Response (Number)
+    description: The question response as a number. Will be empty if the response is not a number! (Refer to other Question Response fields)
+  - name: response_as_ts
+    type: ts
+    display_name: Response (Date / Time)
+    description: The question response as date / time. Will be empty if the response is not in date / time format! (Refer to other Question Response fields)
+  - name: response_as_boolean
+    type: boolean
+    display_name: Response (True / False)
+    description: The question response as true / false. Will be empty if the response is not in true / false format! (Refer to other Question Response fields)
+  - name: response_as_list
+    type: string
+    display_name: Response (List)
+    description: The question response as a list. Will be empty if the response is not a list! (Refer to other Question Response fields)

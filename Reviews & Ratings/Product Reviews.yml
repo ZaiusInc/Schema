@@ -1,0 +1,60 @@
+name: product_reviews
+display_name: Product Reviews
+alias: product_review
+fields:
+  - name: review_id
+    type: string
+    display_name: Review ID
+    description: A unique identifier for this review
+    primary: true
+  - name: product_id
+    type: string
+    display_name: Product ID
+    description: The ID of the reviewed product
+  - name: score
+    type: number
+    display_name: score
+    description: The overall score represented by this review
+  - name: positive_reaction_count
+    type: number
+    display_name: Positive Reaction Count
+    description: The number of users who rated this review positively
+  - name: negative_reaction_count
+    type: number
+    display_name: Negative Reaction Count
+    description: The number of users who rated this review negatively
+  - name: title
+    type: string
+    display_name: Title
+    description: The title given to this review
+  - name: content
+    type: string
+    display_name: Content
+    description: The overall review content
+  - name: visible
+    type: boolean
+    display_name: Visible?
+    description: Whether this review can be seen on the site
+  - name: created_at
+    type: timestamp
+    display_name: Creation Date
+    description: The date and time when this review was submitted
+  - name: deleted
+    type: boolean
+    display_name: Deleted?
+    description: Whether this review has been marked for deletion
+  - name: verified
+    type: boolean
+    display_name: Verified?
+    description: Whether this review was left by a verified buyer
+  - name: top_review
+    type: boolean
+    display_name: Top Review?
+    description: Whether this review is marked as a top review for the product
+relations:
+  - name: product
+    display_name: Product
+    child_object: products
+    join_fields:
+      - parent: product_id
+        child: product_id
