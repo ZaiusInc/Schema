@@ -1,0 +1,64 @@
+name: coupon_rules
+display_name: Coupon Rules
+alias: coupon_rule
+description: Coupon codes can be associated with a coupon rule. These rules describe what the coupon code can do when used by a customer. For example, a coupon code of SUMMER20-43dha8d7vb may be associated with a coupon rule of SUMMER20.
+fields:
+  - name: coupon_rule_id
+    type: string
+    display_name: Coupon Rule ID
+    description: The unique ID for this coupon rule.
+    primary: true
+  - name: name
+    type: string
+    display_name: Name
+    description: A friendly name identifying the sale/occasion this rule might be offered during, e.g. SUMMER2020.
+  - name: discount_percent
+    type: number
+    display_name: Percent Off
+    description: The amount of the discount in percentage points. For example, "5% off" would be represented as 5.
+  - name: discount_value
+    type: number
+    display_name: Value Off
+    description: The amount of the discount in currency. For example, "$4 off" would be represented as 4.
+  - name: free_shipping_type
+    type: string
+    display_name: Free Shipping Type
+    description: Describes how the coupon affects shipping, the only accepted values are "none", "partial", "full_order".
+    valid_values:
+      - none
+      - partial
+      - full_order
+  - name: discount_type
+    type: string
+    display_name: Discount Type
+    description: An identifier for how this discount affects an order, the only accepted values are "per_item_discount", "per_total_discount", "shipping_discount", "free_shipping", or "percentage_discount"
+    valid_values:
+      - per_item_discount
+      - per_total_discount
+      - shipping_discount
+      - free_shipping
+      - percentage_discount
+  - name: uses_per_customer
+    type: number
+    display_name: Max Uses (per Customer)
+    description: The number of times each coupon code that follows this rule may be redeemed.
+  - name: uses_overall
+    type: string
+    display_name: Max Uses (all Customers)
+    description: The number of times each coupon code that follows this rule can be redeemed across all customers.
+  - name: starts_at
+    type: timestamp
+    display_name: Valid From
+    description: The date at which this rule can first be used
+  - name: earned
+    type: boolean
+    display_name: Earned?
+    description: Indicates whether or not the coupon codes following this rule are earned, common methods include earning a loyalty tier or by performing an action (e.g. sharing a product on social media).
+  - name: code_prefix
+    type: string
+    display_name: Prefix
+    description: A prefix which would be found at the beginning of every coupon code using this rule.
+  - name: code_suffix
+    type: string
+    display_name: Suffix
+    description: A suffix which would be found at the end of every coupon code using this rule.

@@ -1,0 +1,26 @@
+name: events
+fields:
+  - name: coupon_code
+    type: string
+    display_name: Coupon Code
+    description: The coupon code given or redeemed in this event.
+relations:
+  - name: coupon
+    display_name: Coupon
+    child_object: assigned_coupons
+    join_fields:
+      - parent: coupon_code
+        child: coupon_code
+actions:
+  - display_name: Coupon Assigned
+    description: Triggered when a coupon is assigned to a customer.
+    type: coupon
+    action: assigned
+    fields:
+      - coupon_code
+  - display_name: Order Purchase
+    description: A customer order purchase that included a coupon.
+    type: order
+    action: purchase
+    fields:
+      - coupon_code

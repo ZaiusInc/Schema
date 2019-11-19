@@ -1,0 +1,21 @@
+name: assigned_coupons
+display_name: Assigned Coupons
+alias: assigned_coupon
+description: Contains all the coupons assigned to customers. Each assigned coupon is typically associated with a Coupon Rule that describes what a coupon does.
+fields:
+  - name: coupon_code
+    type: string
+    display_name: Coupon Code
+    description: The unique ID for this coupon.
+    primary: true
+  - name: coupon_rule_id
+    type: string
+    display_name: Coupon Rule ID
+    description: The unique ID of the coupon rule that the coupon follows.
+relations:
+  - name: coupon_rule
+    display_name: Coupon Rule
+    child_object: coupon_rules
+    join_fields:
+      - parent: coupon_rule_id
+        child: coupon_rule_id
