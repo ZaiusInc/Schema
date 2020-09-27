@@ -43,21 +43,3 @@ fields:
   - name: cancellation_reason
     display_name: Cancellation Reason
     type: string
-  - name: cancellation_reason_comment
-    display_name: Cancellation Reason Comment
-    type: string
-  - name: max_retries_reached
-    display_name: Max Retries Reached
-    type: boolean
-  - name: has_queued_charges
-    display_name: Has Queued Charges
-    type: boolean
-  - name: is_skippable
-    display_name: Is Skippable
-    type: boolean
-  - name: is_swappable
-    display_name: Is Swappable
-    type: boolean
-  - name: is_prepaid
-    display_name: Is Prepaid
-    type: boolean
