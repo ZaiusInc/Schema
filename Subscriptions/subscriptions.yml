@@ -1,0 +1,63 @@
+name: subscriptions
+fields:
+  - name: subscription_id
+    display_name: Subscription ID
+    type: number
+    primary: true
+  - name: created_at
+    display_name: Created At
+    type: timestamp
+  - name: updated_at
+    display_name: Updated At
+    type: timestamp
+  - name: next_charge_scheduled_at
+    display_name: Next Charge Scheduled At
+    type: timestamp
+  - name: cancelled_at
+    display_name: Cancelled At
+    type: timestamp
+  - name: price
+    display_name: Price
+    type: number
+  - name: quantity
+    display_name: Quantity
+    type: number
+  - name: status
+    display_name: Status
+    type: string
+  - name: interval_unit
+    display_name: Interval Unit
+    type: string
+  - name: interval_frequency
+    display_name: Interval Frequency
+    type: string
+  - name: day_of_month
+    display_name: Day of Month
+    type: number
+  - name: day_of_week
+    display_name: Day of Week
+    type: number
+  - name: expire_after_specific_number_of_charges
+    display_name: Expire After Specific Number of Charges
+    type: number
+  - name: cancellation_reason
+    display_name: Cancellation Reason
+    type: string
+  - name: cancellation_reason_comment
+    display_name: Cancellation Reason Comment
+    type: string
+  - name: max_retries_reached
+    display_name: Max Retries Reached
+    type: boolean
+  - name: has_queued_charges
+    display_name: Has Queued Charges
+    type: boolean
+  - name: is_skippable
+    display_name: Is Skippable
+    type: boolean
+  - name: is_swappable
+    display_name: Is Swappable
+    type: boolean
+  - name: is_prepaid
+    display_name: Is Prepaid
+    type: boolean

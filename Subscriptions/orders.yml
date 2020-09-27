@@ -1,0 +1,11 @@
+name: orders
+fields:
+  - name: is_subscription
+    display_name: Is Subscription
+    type: boolean
+  - name: subscription_type
+    display_name: Subscription Type
+    type: string
+  - name: subscription_prepaid
+    display_name: Subscription Prepaid
+    type: boolean
