@@ -1,0 +1,21 @@
+name: customers
+fields:
+  - name: subscription_status
+    display_name: Subscription Status
+    type: string
+    description: Subscription Status
+  - name: subscription_payment_method_valid
+    display_name: Subscription Payment Method Valid
+    type: boolean
+    description: Subscription Payment Method Valid
+  - name: subscription_card_in_dunning
+    display_name: Subscription Card In Dunning
+    type: boolean
+    description: Subscription Card In Dunning
+  - name: subscriptions_total
+    display_name: Subscriptions Total
+    type: number
+  - name: subscriptions_active
+    display_name: Subscriptions Active
+    type: number
+    description: Subscriptions Currently Active

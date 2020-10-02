@@ -1,0 +1,13 @@
+name: events
+fields:
+  - name: subscription_id
+    display_name: Subscription ID
+    type: string
+    description: The ID of a Subscription for a given customer
+relations:
+  - name: subscription
+    display_name: Subscriptions
+    child_object: subscriptions
+    join_fields:
+      parent: subscription_id
+      child: subscription_id

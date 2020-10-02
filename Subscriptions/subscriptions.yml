@@ -1,0 +1,59 @@
+name: subscriptions
+fields:
+  - name: subscription_id
+    display_name: Subscription ID
+    type: number
+    primary: true
+    description: Subscription ID
+  - name: created_at
+    display_name: Created At
+    type: timestamp
+    description: Date subscription created
+  - name: updated_at
+    display_name: Updated At
+    type: timestamp
+    description: Date subscription last updated
+  - name: next_charge_scheduled_at
+    display_name: Next Charge Scheduled At
+    type: timestamp
+    description: Next Charge Scheduled At
+  - name: cancelled_at
+    display_name: Cancelled At
+    type: timestamp
+    description: Date subscription cancelled at
+  - name: price
+    display_name: Price
+    type: number
+    description: Price
+  - name: quantity
+    display_name: Quantity
+    type: number
+    description: Quantity
+  - name: status
+    display_name: Status
+    type: string
+    description: Current status of subscription
+  - name: interval_unit
+    display_name: Interval Unit
+    type: string
+    description: Interval Unit
+  - name: interval_value
+    display_name: Interval Value
+    type: string
+    description: Interval Value
+  - name: day_of_month
+    display_name: Day of Month
+    type: number
+    description: Day of month of subscription
+  - name: day_of_week
+    display_name: Day of Week
+    type: number
+    description: Day of week of subscription
+  - name: expire_after_specific_number_of_charges
+    display_name: Expire After Specific Number of Charges
+    type: number
+    description: Number of charges before subscription expires
+  - name: cancellation_reason
+    display_name: Cancellation Reason
+    type: string
+    description: Cancellation Reason
