@@ -3,9 +3,12 @@ fields:
   - name: is_subscription
     display_name: Is Subscription
     type: boolean
+    description: Is Subscription
   - name: subscription_type
     display_name: Subscription Type
     type: string
+    description: Subscription Type
   - name: subscription_prepaid
     display_name: Subscription Prepaid
     type: boolean
+    description: Subscription Prepaid

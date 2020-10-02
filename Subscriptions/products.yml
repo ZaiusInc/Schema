@@ -1,14 +1,18 @@
 name: products
 fields:
-  - name: subscription_interval_frequency
-    display_name: Subscription Interval Frequency
+  - name: subscription_interval_value
+    display_name: Subscription Interval
     type: number
+    description: Subscription Interval
   - name: subscription_charges_before_expiration
     display_name: Subscriptions Charges Before Expiration
     type: number
+    description: Subscriptions Charges Before Expiration
   - name: subscription_frequency_options
     display_name: Subscription Frequency Options
     type: string
+    description: Subscription Frequency Options
   - name: subscription_interval_unit
     display_name: Subscription Interval Unit
     type: string
+    description: Subscription Interval Unit
