@@ -8,10 +8,10 @@ fields:
     display_name: Subscriptions Charges Before Expiration
     type: number
     description: Subscriptions Charges Before Expiration
-  - name: subscription_frequency_options
-    display_name: Subscription Frequency Options
+  - name: subscription_interval_options
+    display_name: Subscription Interval Options
     type: string
-    description: Subscription Frequency Options
+    description: Subscription Interval Options
   - name: subscription_interval_unit
     display_name: Subscription Interval Unit
     type: string
