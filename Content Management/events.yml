@@ -1,0 +1,9 @@
+name: events
+fields:
+relations:
+  - name: page
+    display_name: Pages
+    child_object: pages
+    join_fields:
+      parent: page
+      child: page
