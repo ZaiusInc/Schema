@@ -1,0 +1,59 @@
+name: pages
+fields:
+  - name: page
+    display_name: Page
+    type: text
+    primary: true
+    description: Page URL
+  - name: created_at
+    display_name: Created At
+    type: timestamp
+    description: Date page created
+  - name: updated_at
+    display_name: Updated At
+    type: timestamp
+    description: Date page last updated
+  - name: author
+    display_name: Author
+    type: text
+    description: Author of the page
+  - name: title
+    display_name: Title
+    type: text
+    description: Title of the page
+  - name: body
+    display_name: Body Text
+    type: text
+    description: Text of the page
+  - name: body_html
+    display_name: Body HTML
+    type: text
+    description: Markup of the page
+  - name: excerpt
+    display_name: Excerpt
+    type: text
+    descripion: Short description of the page
+  - name: meta_tags
+    display_name: Meta Tags
+    type: text
+    description: Meta tags used to describe page
+  - name: categories
+    display_name: Categories
+    type: text
+    description: Categories of page
+  - name: tags
+    display_name: Tags
+    type: text
+    description: Tags of page
+  - name: slug
+    display_name: Slug
+    type: text
+    description: Slug or handle of the pags
+  - name: is_live
+    display_name: Live
+    type: boolean
+    description: Is the page currently live
+  - name: image_url
+    display_name: Image URL
+    type: text
+    description: Primary image on page for thumbnails
