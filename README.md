@@ -1,3 +1,5 @@
+Archiving as this was a conceptual work that is not in prod
+
 # Zaius Base Schema & Modules
 When building Zaius apps, mapping to the base
 Zaius schema and/or using Schema Modules ensures that your app /
